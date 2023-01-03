@@ -354,7 +354,7 @@ class PlayState extends MusicBeatState
 		FlxG.cameras.add(dialogueHUD);
 
 		#if mobile
-		addHitbox(true, false);
+		addHitbox(false);
 		addHitboxCamera();
 		#end
 		
