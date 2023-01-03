@@ -78,12 +78,12 @@ class MusicBeatState extends FNFUIState
 			remove(virtualPad);
 	}
 
-	public function addHitbox(gradientHints:Bool = false, ?visible = true):Void
+	public function addHitbox(?visible = true):Void
 	{
 		if (hitbox != null)
 			removeHitbox();
 
-		hitbox = new FlxHitbox(gradientHints);
+		hitbox = new FlxHitbox();
 		hitbox.visible = visible;
 		add(hitbox);
 
@@ -262,12 +262,12 @@ class MusicBeatSubState extends FlxSubState
 			remove(virtualPad);
 	}
 
-	public function addHitbox(gradientHints:Bool = false, ?visible = true):Void
+	public function addHitbox(?visible = true):Void
 	{
 		if (hitbox != null)
 			removeHitbox();
 
-		hitbox = new FlxHitbox(gradientHints);
+		hitbox = new FlxHitbox();
 		hitbox.visible = visible;
 		add(hitbox);
 
