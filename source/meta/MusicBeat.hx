@@ -78,18 +78,18 @@ class MusicBeatState extends FNFUIState
 			remove(virtualPad);
 	}
 
-	public function addHitbox(?visible = true):Void
+	public function addHitbox(gradientHints:Bool = false, ?visible = true):Void
 	{
 		if (hitbox != null)
 			removeHitbox();
 
-		hitbox = new FlxHitbox();
+		hitbox = new FlxHitbox(gradientHints);
 		hitbox.visible = visible;
 		add(hitbox);
 
 		controls.setHitBox(hitbox);
-		trackedInputsHitbox = controls.trackedInputs;
-		controls.trackedInputs = [];
+		trackedInputsHitbox = controls.trackedInputsNOTES;
+		controls.trackedInputsNOTES = [];
 	}
 
 	public function addHitboxCamera(DefaultDrawTarget:Bool = true):Void
@@ -262,18 +262,18 @@ class MusicBeatSubState extends FlxSubState
 			remove(virtualPad);
 	}
 
-	public function addHitbox(?visible = true):Void
+	public function addHitbox(gradientHints:Bool = false, ?visible = true):Void
 	{
 		if (hitbox != null)
 			removeHitbox();
 
-		hitbox = new FlxHitbox();
+		hitbox = new FlxHitbox(gradientHints);
 		hitbox.visible = visible;
 		add(hitbox);
 
 		controls.setHitBox(hitbox);
-		trackedInputsHitbox = controls.trackedInputs;
-		controls.trackedInputs = [];
+		trackedInputsHitbox = controls.trackedInputsNOTES;
+		controls.trackedInputsNOTES = [];
 	}
 
 	public function addHitboxCamera(DefaultDrawTarget:Bool = true):Void
